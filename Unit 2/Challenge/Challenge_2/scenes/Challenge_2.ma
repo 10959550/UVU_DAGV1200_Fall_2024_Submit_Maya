@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Lab_2.ma
-//Last modified: Fri, Sep 06, 2024 09:12:24 PM
+//Name: Challenge_2.ma
+//Last modified: Fri, Sep 06, 2024 09:19:04 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "2ECF006B-4437-91BB-C29E-B88118B317F8";
+fileInfo "UUID" "88132A31-43B4-E0F4-2AC9-B7894B089E14";
 createNode transform -s -n "persp";
 	rename -uid "F4F6F1F5-4B79-9AAF-DD0F-2BAF9C4BFD02";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.790858609033318 19.373555860702275 2.9070793645204809 ;
-	setAttr ".r" -type "double3" -39.460611939718852 -277.11465418524688 0 ;
+	setAttr ".t" -type "double3" -4.0409132860238977 3.353362446033703 12.345446743414945 ;
+	setAttr ".r" -type "double3" -14.860611939747962 -367.11465418524006 -6.0098138355177346e-16 ;
 	setAttr ".rpt" -type "double3" -7.1883764852718297e-17 4.2827035869647591e-17 -4.5855945287191577e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "74C01E69-405C-C974-EA5D-6197BC7797AE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 30.401176128516447;
+	setAttr ".coi" 12.871767593032423;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -81,10 +81,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Kitchen";
 	rename -uid "B27C7C39-424A-476B-4A2E-A98F59D0A316";
-	setAttr ".t" -type "double3" 0 0.20615749061111144 0 ;
-	setAttr ".rp" -type "double3" 0 -0.20615749061111144 0 ;
-	setAttr ".sp" -type "double3" 0 7.0485839387401938e-11 0 ;
-	setAttr ".spt" -type "double3" 0 -0.20615749068157951 0 ;
+	setAttr ".sp" -type "double3" 0 1.7763568394002505e-14 0 ;
 createNode mesh -n "KitchenShape" -p "Kitchen";
 	rename -uid "5A61E489-43D5-0762-73A1-A6B5C85566D5";
 	setAttr -k off ".v";
@@ -113,10 +110,10 @@ createNode mesh -n "KitchenShape" -p "Kitchen";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 14 ".pt[0:13]" -type "float3"  -1 0 1 1 0 1 -1 2 1 -1 2 
-		-1 1 2 -1 -1 0 -1 1 0 -1 -1.0650001 2 -1.0650001 0.99944931 2 -1.0650001 1.0005507 
-		-0.065000057 -1.0650001 -1.0650001 -0.065000057 -1.0650001 1 -0.065000057 1 -1.0650001 
-		-0.065000057 1 -1.0650001 2 1;
+	setAttr -s 14 ".pt[0:13]" -type "float3"  -1 -7.0468076e-11 1 1 -7.0468076e-11 
+		1 -1 2 1 -1 2 -1 1 2 -1 -1 -7.0468076e-11 -1 1 -7.0468076e-11 -1 -1.0650001 2 -1.0650001 
+		0.99944931 2 -1.0650001 1.0005507 -0.065000057 -1.0650001 -1.0650001 -0.065000057 
+		-1.0650001 1 -0.065000057 1 -1.0650001 -0.065000057 1 -1.0650001 2 1;
 	setAttr -s 14 ".vt[0:13]"  -2 0 2 2 0 2 -2 4 2 -2 4 -2 2 4 -2 -2 0 -2
 		 2 0 -2 -2.13000011 4 -2.13000011 1.99889863 4 -2.13000011 2.0011014938 -0.13000011 -2.13000011
 		 -2.13000011 -0.13000011 -2.13000011 2 -0.13000011 2 -2.13000011 -0.13000011 2 -2.13000011 4 2;
@@ -2427,4 +2424,4 @@ connectAttr "MagentaColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "WhiteColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "BlackColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Lab_2.ma
+// End of Challenge_2.ma
