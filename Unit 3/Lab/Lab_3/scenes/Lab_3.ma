@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lab_3.ma
-//Last modified: Thu, Sep 12, 2024 10:28:29 PM
+//Last modified: Thu, Sep 12, 2024 10:37:44 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "E8006A96-439C-1D14-7E9F-99957898F125";
+fileInfo "UUID" "5E75F6A6-41B4-E877-885A-3A9AFE384973";
 createNode transform -s -n "persp";
 	rename -uid "F4F6F1F5-4B79-9AAF-DD0F-2BAF9C4BFD02";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.337604361407175 10.54819412112321 19.226542626813075 ;
-	setAttr ".r" -type "double3" -17.860611952459031 -1405.5146541827844 9.6465682221962617e-16 ;
+	setAttr ".t" -type "double3" 14.799364732479068 7.00002054605525 19.233056324850029 ;
+	setAttr ".r" -type "double3" -9.4606119524669889 -1402.7146541827663 0 ;
 	setAttr ".rpt" -type "double3" -7.1883764852718297e-17 4.2827035869647591e-17 -4.5855945287191577e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "74C01E69-405C-C974-EA5D-6197BC7797AE";
@@ -2133,11 +2133,11 @@ createNode mesh -n "TileShape6" -p "|TileFloor|TileRow06|Tile06";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pPlane1";
+createNode transform -n "Window";
 	rename -uid "5AC55051-444D-BE54-77DC-9C951B870C54";
 	setAttr ".rp" -type "double3" 5.2128466705420973 2.6112106247989679 -3.0390439033508301 ;
 	setAttr ".sp" -type "double3" 5.2128466705420973 2.6112106247989679 -3.0390439033508301 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
+createNode mesh -n "WindowShape" -p "Window";
 	rename -uid "B4FF015D-4E4B-931E-B175-33B41CADB409";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2731,5 +2731,5 @@ connectAttr "MagentaColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "WhiteColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "BlackColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WindowShape.iog" ":initialShadingGroup.dsm" -na;
 // End of Lab_3.ma
