@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Challenge_2.ma
-//Last modified: Thu, Sep 12, 2024 10:27:58 PM
+//Name: Lab_3.ma
+//Last modified: Thu, Sep 12, 2024 10:28:29 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "D4131B49-4286-EC7C-7199-1896A40874F1";
+fileInfo "UUID" "E8006A96-439C-1D14-7E9F-99957898F125";
 createNode transform -s -n "persp";
 	rename -uid "F4F6F1F5-4B79-9AAF-DD0F-2BAF9C4BFD02";
 	setAttr ".v" no;
@@ -2732,4 +2732,4 @@ connectAttr "WhiteColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "BlackColor.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Challenge_2.ma
+// End of Lab_3.ma
