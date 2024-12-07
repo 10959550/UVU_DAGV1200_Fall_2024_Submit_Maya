@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Challenge_6.ma
-//Last modified: Sun, Oct 06, 2024 11:51:53 PM
+//Last modified: Mon, Oct 07, 2024 12:01:50 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,21 +12,21 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "408E4F7E-406E-5B2E-EAE9-0AB1A1E83220";
+fileInfo "UUID" "5E611C02-4585-8272-4474-C4A789C243B5";
 createNode transform -s -n "persp";
 	rename -uid "62874013-49CA-A1A6-B1D1-44B6655E01AC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.4272681620869623 2.0021013354866084 1.2719679405219035 ;
-	setAttr ".r" -type "double3" -8.1972575699732833 -1008.9999999998474 -2.4423109554367129e-15 ;
+	setAttr ".t" -type "double3" 4.4160575857527737 2.136419825265456 2.7192525747100187 ;
+	setAttr ".r" -type "double3" -14.197257569933258 -1024.599999999765 -1.40027723699985e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B3612CCD-48A1-5BFA-8167-92A548C7A4C6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.7219440448988079;
+	setAttr ".coi" 5.1195809757265165;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.0723395309068855 1.1862576361233028 -0.57188185437333405 ;
+	setAttr ".tp" -type "double3" 0.33065557479858398 0.88078635931015015 -0.099077493803329308 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E07E8B85-43E3-C564-8FF5-BFA971164954";
@@ -10356,8 +10356,7 @@ createNode mesh -n "TopSiren_Shape1" -p "TopSiren_1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "BoatSeats" -p "Boat";
 	rename -uid "F9FF7552-4468-433F-CBA8-FFBFA336FB6A";
-	setAttr ".s" -type "double3" 1 1.0945312042072075 1.4138616002419484 ;
-	setAttr ".rp" -type "double3" 1.0982478267199729 0.4656732204554942 -1 ;
+	setAttr ".rp" -type "double3" 1.0982478267199729 0.4656732204554942 -1.0000000000000002 ;
 	setAttr ".sp" -type "double3" 1.0982478267199729 0.4656732204554942 -0.99999999999998468 ;
 createNode mesh -n "BoatSeatsShape" -p "BoatSeats";
 	rename -uid "BFBE5090-4F71-A6E3-F0A6-899DDF59C87C";
@@ -10385,6 +10384,10 @@ createNode mesh -n "BoatSeatsShape" -p "BoatSeats";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0 -0.0096175103 -6.4392935e-15 
+		0 -0.0096175103 -6.4392935e-15 0 0.0096175084 -6.4392935e-15 0 0.0096175084 -6.4392935e-15 
+		0 0.0096175084 -0.073788226 0 0.0096175084 -0.073788226 0 -0.0096175103 -0.073788226 
+		0 -0.0096175103 -0.073788226;
 	setAttr -s 8 ".vt[0:7]"  0.74113196 0.36393422 -1 1.45536375 0.36393422 -1
 		 0.74113196 0.5674122 -1 1.45536375 0.5674122 -1 0.74113196 0.5674122 -1.17829204
 		 1.45536375 0.5674122 -1.17829204 0.74113196 0.36393422 -1.17829204 1.45536375 0.36393422 -1.17829204;
